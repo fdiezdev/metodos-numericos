@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 m = 68.1
 c = 12.5
@@ -12,8 +13,11 @@ print("n: "+ str(n))
 
 # Creamos dos vectores para v y t con dimension n
 # luego en el ciclo for modificamos indice a indice
-v = [0.0]*n
-t = [0.0]*n
+# v = [0.0]*n
+# t = [0.0]*n
+# Esto es una forma alternativa de crear los vectores de dimension n
+v = np.zeros(n)
+t = np.zeros(n)
 
 for i in range(n-1):
     print(i)
