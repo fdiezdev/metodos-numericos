@@ -1,5 +1,5 @@
 from math import *
-
+imax = 100 # Condicion de corte
 # Definimos la funcion
 
 eqn = str(input("Ingrese ecuacion: "))
@@ -20,7 +20,7 @@ def biseccion(a, b, t):
     if(f(a)*f(b)>0):
         print("En el intervalo no hay cambio de signo")
     else:
-        while (abs(n1-n0)>=t):
+        while (abs(n1-n0)>=t or k >= imax):
             n1 = n0
             n0 = (a+b)/2
 

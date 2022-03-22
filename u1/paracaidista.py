@@ -8,16 +8,16 @@ ti = 0
 tf = 12
 dt = 2 # Este es el "paso" que tomo
 
-n = int(((tf-ti)/dt))
+n = int(((tf-ti)/dt) + 1)
 # print("n: "+ str(n))
 
 v = np.zeros(n)
 t = np.zeros(n)
 
-for i in range(n-1):
+for i in range(n-1): # ? Por que es hasta n-1
     print(i)
     t[i+1] = t[i] + dt
-    v[i+1] = v[i]+g-(c/m*v[i])*(t[i+1]-t[i])
+    v[i+1] = v[i] + ( g - ( (c/m) * v[i] ) ) * dt
     print(t[i+1], v[i+1])
 
 plt.plot(t, v)
