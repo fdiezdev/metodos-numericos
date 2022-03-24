@@ -1,5 +1,7 @@
 from math import *
+
 imax = 100 # Condicion de corte
+
 # Definimos la funcion
 
 eqn = str(input("Ingrese ecuacion: "))
@@ -9,7 +11,7 @@ def f(x):
 
 # a -> limite inferior
 # b -> limite superior
-# t -> tolerancia ???
+# t -> error de tolerancia ???
 def biseccion(a, b, t):
 
     n1=a
